@@ -11,7 +11,7 @@
       <user-list :users="users"
         :logout="logout" />
 
-      <message-list :messages="messages"
+      <message-list :messages="messages.data"
         :findMessages="findUsers"
         :createMessage="createMessage" />
     </div>
