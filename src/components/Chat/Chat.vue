@@ -13,6 +13,7 @@
 
       <message-list :messages="messages.data"
         :findMessages="findUsers"
+        :patchMessage="patchMessage"
         :createMessage="createMessage" />
     </div>
   </main>
@@ -42,6 +43,7 @@ export default {
   methods: {
     ...mapActions('messages', {
       findMessages: 'find',
+      patchMessage: 'patch',
       createMessage: 'create'
     }),
     ...mapActions('users', {

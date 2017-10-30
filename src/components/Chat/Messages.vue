@@ -3,7 +3,7 @@
     <main class="chat flex flex-column flex-1 clear">
       <single-message v-for="message in messages" key="message._id" :message="message" v-cloak />
     </main>
-    <ComposeMessage :createMessage="createMessage" />
+    <ComposeMessage :createMessage="createMessage" :patchMessage="patchMessage" />
   </div>
 </template>
 
@@ -22,7 +22,8 @@ export default {
   props: {
     messages: Array,
     findMessages: Function,
-    createMessage: Function
+    createMessage: Function,
+    patchMessage: Function
   },
   methods: {
     scrollToBottom () {
