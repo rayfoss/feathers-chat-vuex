@@ -32,7 +32,7 @@ export default {
     reviseMessage () {
       // Create a new message and then clear the input field
       debugger
-      this.patchMessage(this.oldMessage._id, {text: this.oldMessage.text}, {}).then(this.clearMessage)
+      this.patchMessage([this.oldMessage._id, {text: this.oldMessage.text}]).then(this.clearMessage)
     },
     clearMessage (result) {
       this.newMessage = ''
